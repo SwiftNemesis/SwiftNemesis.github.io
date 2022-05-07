@@ -1,4 +1,4 @@
-# Google Cloud Compute using MHN-ADMIN and Dionaea Honeypot
+# Dionaea Honeypot Using MHN-ADMIN and Google Cloud Compute
 
 ***For this Honeypot, we will be using Google Cloud Compute and the Google Cloud SDK on Windows.***
 
