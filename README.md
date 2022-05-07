@@ -165,7 +165,7 @@ wget "http://x.x.x.x/api/script/?text=true&script_id=2" -O deploy.sh && sudo bas
 
 #### Backup Data Visual Example
 
-<img src=session-json-example.gif>
+<img src="session-json-example.gif">
 
 ## Deploying Additional Honeypots
 
