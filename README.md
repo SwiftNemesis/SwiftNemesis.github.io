@@ -77,10 +77,14 @@ gcloud compute instances create "mhn-admin" ^
 	Superuser password: Use any password of your choosing.
 	
 ***As stated before, hit n for the rest of the prompts. This process should take anywhere from 5-15 minutes.***
-**Now you have created a mhn-admin VM and are ready to create the Honeypot :)**
+**Now you have created a mhn-admin VM and are ready to create the Honeypot**
+
+#### MHN Admin Visual Example
 <img src="mhn-admin.gif">
 
 **The gif below shows you how to access the MHN-Admin website console using the username and password you created.**
+
+#### MHN Admin Website Visual Example
 <img src="mhn-admin-website.gif">
 
 ## Dionaea Honeypot Deployment 
@@ -116,6 +120,7 @@ gcloud compute instances create "mhn-admin" ^
 
 `gcloud compute ssh honeypot-1`
 
+#### Honeypot SSH Visual Example
 <img src="dionaea-honeypot.gif">
 
 **Now we're going to install the honeypot application.**
@@ -132,6 +137,7 @@ wget "http://x.x.x.x/api/script/?text=true&script_id=2" -O deploy.sh && sudo bas
 
 **Now that it's installed, look under the Sensors tab on your MHN-admin website. Honeypot-1 should appear**
 
+#### Honeypot Sensor Visual Example
 <img src="dionaea-honeypot-sensor.gif">
 
 
@@ -161,8 +167,7 @@ wget "http://x.x.x.x/api/script/?text=true&script_id=2" -O deploy.sh && sudo bas
 {"_id":{"$oid":"626f8a77616a1e65181af2e2"},"protocol":"pcap","hpfeed_id":{"$oid":"626f8a75616a1e65181af2e1"},"timestamp":{"$date":"2022-05-02T07:38:29.651Z"},"source_ip":"81.17.23.138","source_port":52835,"destination_port":81,"identifier":"c22872be-c9ea-11ec-a047-42010a8a0004","honeypot":"dionaea"}
 ```
 
-#### Backup Data Visual Example
-
+#### Data Backup Visual Example
 <img src="session-json-example.gif">
 
 ## Deploying Additional Honeypots
@@ -207,8 +212,7 @@ wget "http://x.x.x.x/api/script/?text=true&script_id=2" -O deploy.sh && sudo bas
 
 `x.x.x.x = The IP address of your MHN Admin VM`
 	
-#### Multi Honeypot Deployment Example
-
+#### Multi Honeypot Deployment Visual Example
 <img src="x-honeypot.gif">
 
 ## Extra: Run your own NMAP Attack
@@ -222,7 +226,7 @@ wget "http://x.x.x.x/api/script/?text=true&script_id=2" -O deploy.sh && sudo bas
 The NMAP attack can take anywhere from 5-15 minutes, so don't be discouraged if it's taking a long time. 
 You can also hit space bar in the console to see the progress it is at.
 
-#### NMAP Attack Example
+#### NMAP Attack Visual Example
 
 <img src="NMAP-test.png">
 
@@ -340,7 +344,7 @@ In order to find the count of number of files in the directory, you can use the 
 
 `ls | wc -l`
 
-### Some extra findings and research on WannaCry
+## Some extra findings and research on WannaCry
 
 #### What is it?
 WannaCry is a type of ransomeware that consists of multiple components. In 
