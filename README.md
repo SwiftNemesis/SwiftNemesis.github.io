@@ -1,12 +1,10 @@
 # Google Cloud Compute using MHN-ADMIN and Dionaea Honeypot
 
-**Time spent:** **15** hours spent in total
-
 ***For this Honeypot, we will be using Google Cloud Compute and the Google Cloud SDK on Windows.***
 
 ## MHN-Admin Deployment
 
-**Summary:** Today, we'll be using GCP to deploy a MHN-Admin Environment for our Honeypot.
+**Summary:** We'll be using GCP to deploy a MHN-Admin Environment for our Honeypot.
 
 You can setup a free trial at: `https://cloud.google.com/compute`
 
@@ -55,7 +53,7 @@ gcloud compute instances create "mhn-admin" ^
 	gcloud compute ssh mhn-admin
 
 
-**Once we SSH into the VM, we're going to install the MHN Admin Application :)**
+**Once we SSH into the VM, we're going to install the MHN Admin Application**
 
 **First we will retrieve the latest packages using:**
 
@@ -82,7 +80,7 @@ gcloud compute instances create "mhn-admin" ^
 **Now you have created a mhn-admin VM and are ready to create the Honeypot :)**
 <img src="mhn-admin.gif">
 
-**The below gif shows you how to access the MHN-Admin website console using the username and password you created.**
+**The gif below shows you how to access the MHN-Admin website console using the username and password you created.**
 <img src="mhn-admin-website.gif">
 
 ## Dionaea Honeypot Deployment 
@@ -114,7 +112,7 @@ gcloud compute instances create "mhn-admin" ^
 		--boot-disk-type "pd-standard" ^
 		--boot-disk-device-name "honeypot-1"
 
-**In order to access the newly created honeypot, you can do the same as before with SSH :)**
+**In order to access the newly created honeypot, you can do the same as before with SSH.**
 
 `gcloud compute ssh honeypot-1`
 
@@ -153,7 +151,7 @@ wget "http://x.x.x.x/api/script/?text=true&script_id=2" -O deploy.sh && sudo bas
 
 `gcloud compute scp mhn-admin:~/session.json ./session.json`
 
-**IF THAT DOES NOT WORK, USE THE BELOW COMMAND**
+**IF THAT DOES NOT WORK, USE THE COMMAND BELOW**
 
 `gcloud compute scp mhn-admin:/home/"your username"/session.json ./session.json`
 
