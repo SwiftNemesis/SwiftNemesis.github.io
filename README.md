@@ -120,7 +120,7 @@ gcloud compute instances create "mhn-admin" ^
 
 <img src="dionaea-honeypot.gif">
 
-** Now we're going to install the honeypot application.**
+**Now we're going to install the honeypot application.**
 
 `In order to do so, we're going to use the "Ubuntu/Raspberry Pi - Dionaea" deploy command under Deploy on your MHN Server`
 
@@ -141,11 +141,11 @@ wget "http://x.x.x.x/api/script/?text=true&script_id=2" -O deploy.sh && sudo bas
 
 **Summary:** We will export the data records from the honeypots. It stores itself in a MongoDB format in a session.json file we will create.
 
-** First, we will SSH back into the mhn-admin VM**
+**First, we will SSH back into the mhn-admin VM**
 
 `gcloud compute ssh mhn-admin`
 
-** Second, we will run this command to export the MongoDB information to a session.json file in our working directory**
+**Second, we will run this command to export the MongoDB information to a session.json file in our working directory**
 
 	mongoexport --db mnemosyne --collection session > session.json
 
